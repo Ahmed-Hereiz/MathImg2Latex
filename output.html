@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown with Math</title>
+    <script type="text/javascript">
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\(', '\)']],
+          displayMath: [['$$', '$$'], ['\[', '\]']]
+        }
+      };
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js">
+    </script>
+</head>
+<body>
+    <p>The image contains a handwritten indefinite integral:</p>
+<p><code>markdown
+$\int \tan x \, dx$</code></p>
+<p>This is a standard integral in calculus.  The solution is found using the following steps:</p>
+<p><strong>1. Rewrite tan x:</strong></p>
+<p>We know that $\tan x = \frac{\sin x}{\cos x}$.  Therefore, the integral becomes:</p>
+<p>$\int \frac{\sin x}{\cos x} \, dx$</p>
+<p><strong>2.  Substitution:</strong></p>
+<p>Let $u = \cos x$. Then, $du = -\sin x \, dx$.  This means that $\sin x \, dx = -du$. Substituting into the integral:</p>
+<p>$\int \frac{-du}{u}$</p>
+<p><strong>3. Integration:</strong></p>
+<p>This is a simple integral of the form $\int \frac{1}{u} \, du = \ln|u| + C$, where C is the constant of integration.  Therefore:</p>
+<p>$\int \frac{-du}{u} = -\ln|u| + C$</p>
+<p><strong>4. Back-substitution:</strong></p>
+<p>Substitute back $u = \cos x$:</p>
+<p>$-\ln|\cos x| + C$</p>
+<p><strong>Therefore, the solution to the integral $\int \tan x \, dx$ is $-\ln|\cos x| + C$</strong></p>
+</body>
+</html>
