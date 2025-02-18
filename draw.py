@@ -34,7 +34,7 @@ def gui_draw():
 
     canvas.bind("<B1-Motion>", draw)
 
-    save_button = tk.Button(window, text="Save Image", command=save_image)
+    save_button = tk.Button(window, text="Send image to AI", command=save_image)
     save_button.pack(pady=10)
 
     window.bind("<Control-s>", lambda event: save_image())  
